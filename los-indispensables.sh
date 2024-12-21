@@ -1,16 +1,16 @@
 #!/bin/bash
-#
+
 # Este script reune las herramientas que usualmente necesitamos
 # para el desarrollo del equipo de materiagris
 # creado por; Jenrry Soto Dextre 
 # correo; jenrry.soto@materiagris.pe
-#
+
 while :
 do
 echo ""
 echo "Escoge una opcion"
 echo ""
-echo "1.- actulizar e instalar herremientas necesarias"
+echo "1.- Actulizar el sistema e Instalar herremientas necesarias"
 echo "2.- Instalar sam cli"
 echo "3.- Instalar aws cli"
 echo "4.- Instalar dotnet8 y sdk"
