@@ -2,6 +2,8 @@
 #
 # Este script reune las herramientas que usualmente necesitamos
 # para el desarrollo del equipo de materiagris
+# creado por; Jenrry Soto Dextre 
+# correo; jenrry.soto@materiagris.pe
 #
 while :
 do
