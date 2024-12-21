@@ -157,7 +157,7 @@ echo "------------------------------"
 
 ;;
 
-0) echo "SALIR DEL SCRIPT" ; exit 0
+0) echo "CERO PARA SALIR DEL SCRIPT" ; exit 0
 
 esac
 done
