@@ -75,7 +75,7 @@ echo "------------------------------"
 5) echo "INSTALACION DE NODE 20v"
 echo "INSTALACION DE NODE VERSION 20"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-# esto permite no recargar la termianl cuando se esta esta ejecutando el script
+#permite recargar la termianl cuando se esta esta ejecutando el script
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # esto carga el nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # esto ayuda a cargar el nvm y bash_completion
@@ -136,7 +136,7 @@ echo "------------------------------"
 
 echo "INSTALACION DE NODE VERSION 20"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-
+#esta parte permite refrescar la configuración mienstras se esta ejecutando el script
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # esto carga el nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # esto ayuda a cargar el nvm y bash_completion
