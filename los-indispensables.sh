@@ -16,9 +16,10 @@ echo "3.- Instalar aws cli"
 echo "4.- Instalar dotnet8 y sdk"
 echo "5.- Instalar node 20v"
 echo "6.- Instalar terraform"
-echo "7.- Instalar todo lo anterior"
+echo "7.- Instalar docker y docker-compose"
+echo "8.- Instalar todo lo anterior"
 echo "0.- Cero, Salir del script"
-echo ""
+echo " "
 
 echo -n "Su opción elegida es el número => "
 
@@ -41,7 +42,7 @@ echo "---------------------------"
 echo "SAM VERSION INSTALADO      "
 sam --version
 echo "---------------------------"
-echo "                           "
+echo " "
 
 ;;
 
@@ -56,7 +57,7 @@ echo "----------------------------"
 echo "VERSION INSTALADA DE AWS CLI"
 aws --version
 echo "---------------------------"
-echo "                           "
+echo " "
 
 ;;
 
@@ -69,6 +70,7 @@ echo "------------------------------"
 echo "VERSION DE DOTNET INSTALADO   "
 dotnet --version
 echo "------------------------------"
+echo " "
 
 ;;
 
@@ -86,6 +88,7 @@ echo "VERSION DE NODE INSTALADO     "
 node -v
 npm -v
 echo "------------------------------"
+echo " "
 
 ;;
 
@@ -98,10 +101,28 @@ echo "------------------------------"
 echo "VERSION DE TERRAFORM INSTALADO"
 terraform --version
 echo "------------------------------"
+echo " "
 
 ;;
 
-7) echo "Instalar todo"
+7) echo "Instalar docker y docker-compose"
+echo "INSTALACIÓN DE DOCKER Y DOCKER-COMPOSE"
+apt install docker.io docker-compose -y
+usermod -aG docker $USER
+newgrp docker
+systemctl start docker
+systemctl enable docker
+echo "-------------------------------"
+echo "VERSION DOCKER INSTALADO"
+docker --version
+echo "VERSION DOCKER-COMPOSE INSTALADO"
+docker-compose --version
+echo "-------------------------------"
+echo " "
+
+;;
+
+8) echo "Instalar todo"
 echo "INSTALACION DE SAM CLI"
 echo "---------------------------"
 wget https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip
@@ -111,7 +132,7 @@ echo "---------------------------"
 echo "SAM VERSION INSTALADO      "
 sam --version
 echo "---------------------------"
-echo "                           "
+echo " "
 #####################################
 echo "---------------------------"
 echo "INTALACION DE AWS CLI"
@@ -123,7 +144,7 @@ echo "----------------------------"
 echo "VERSION INSTALADA DE AWS CLI"
 aws --version
 echo "---------------------------"
-echo "                           "
+echo " "
 #####################################
 echo "------------------------------"
 echo "INATALACION DE DOTNET8 MAS SDK"
@@ -133,6 +154,7 @@ echo "------------------------------"
 echo "VERSION DE DOTNET INSTALADO   "
 dotnet --version
 echo "------------------------------"
+echo " "
 ####################################
 echo "INSTALACION DE NODE VERSION 20"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -147,6 +169,7 @@ echo "VERSION DE NODE INSTALADO     "
 node -v
 npm -v
 echo "------------------------------"
+echo " "
 #####################################
 echo "INSTALACION DE TERRAFORM      "
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
@@ -156,7 +179,23 @@ echo "------------------------------"
 echo "VERSION DE TERRAFORM INSTALADO"
 terraform --version
 echo "------------------------------"
+echo " "
 #####################################
+echo "INSTALACIÓN DE DOCKER Y DOCKER-COMPOSE"
+apt install docker.io docker-compose -y
+usermod -aG docker $USER
+newgrp docker
+systemctl start docker
+systemctl enable docker
+echo "-------------------------------"
+echo "VERSION DOCKER INSTALADO"
+docker --version
+echo "VERSION DOCKER-COMPOSE INSTALADO"
+docker-compose --version
+echo "-------------------------------"
+echo " "
+#####################################
+
 ;;
 
 0) echo "CERO PARA SALIR DEL SCRIPT" ; exit 0
