@@ -112,7 +112,7 @@ echo "SAM VERSION INSTALADO      "
 sam --version
 echo "---------------------------"
 echo "                           "
-
+#####################################
 echo "---------------------------"
 echo "INTALACION DE AWS CLI"
 echo "---------------------------"
@@ -124,7 +124,7 @@ echo "VERSION INSTALADA DE AWS CLI"
 aws --version
 echo "---------------------------"
 echo "                           "
-
+#####################################
 echo "------------------------------"
 echo "INATALACION DE DOTNET8 MAS SDK"
 echo "------------------------------"
@@ -133,7 +133,7 @@ echo "------------------------------"
 echo "VERSION DE DOTNET INSTALADO   "
 dotnet --version
 echo "------------------------------"
-
+####################################
 echo "INSTALACION DE NODE VERSION 20"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 #esta parte permite refrescar la configuración mienstras se esta ejecutando el script
@@ -147,7 +147,7 @@ echo "VERSION DE NODE INSTALADO     "
 node -v
 npm -v
 echo "------------------------------"
-
+#####################################
 echo "INSTALACION DE TERRAFORM      "
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
@@ -156,10 +156,10 @@ echo "------------------------------"
 echo "VERSION DE TERRAFORM INSTALADO"
 terraform --version
 echo "------------------------------"
-
+#####################################
 ;;
 
 0) echo "CERO PARA SALIR DEL SCRIPT" ; exit 0
-
+#####################################
 esac
 done
