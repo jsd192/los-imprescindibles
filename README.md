@@ -1,4 +1,4 @@
-# los-impresindibles
+# los imprescindibles
 Este script pretende ayudar de una manera mas facil la instalación de las herramientas mas comunes usadas.
 Como se corre este script, que comando debo usar?
 
