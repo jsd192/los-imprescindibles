@@ -107,11 +107,16 @@ echo " "
 
 7) echo "Instalar docker y docker-compose"
 echo "INSTALACIÓN DE DOCKER Y DOCKER-COMPOSE"
-apt install docker.io docker-compose -y
-usermod -aG docker $USER
-newgrp docker
-systemctl start docker
-systemctl enable docker
+sudo apt install docker.io -y
+USUARIO_ACTUAL=$(whoami)
+sudo usermod -aG docker $USUARIO_ACTUAL
+newgrp docker <<EOF
+echo "Docker instalado"
+EOF
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 echo "-------------------------------"
 echo "VERSION DOCKER INSTALADO"
 docker --version
@@ -182,11 +187,16 @@ echo "------------------------------"
 echo " "
 #####################################
 echo "INSTALACIÓN DE DOCKER Y DOCKER-COMPOSE"
-apt install docker.io docker-compose -y
-usermod -aG docker $USER
-newgrp docker
-systemctl start docker
-systemctl enable docker
+sudo apt install docker.io -y
+USUARIO_ACTUAL=$(whoami)
+sudo usermod -aG docker $USUARIO_ACTUAL
+newgrp docker <<EOF
+echo "Docker instalado"
+EOF
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 echo "-------------------------------"
 echo "VERSION DOCKER INSTALADO"
 docker --version
