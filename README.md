@@ -8,3 +8,5 @@ Nos aparecera una lista de las herramientas a instalar, podemos intalar uno por 
 La opción 0 cero es es para salir del script.
 
 Nota: este script se probó en una maquina virtual con Ubuntu server 20.04 LTS
+
+
